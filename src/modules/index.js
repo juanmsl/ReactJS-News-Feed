@@ -5,7 +5,7 @@ import Category from './category';
 import Search from './search';
 
 
-export default class WhatsupApp extends React.Component {
+export default class NewsFeedApp extends React.Component {
   render() {
     return (
       <BrowserRouter>

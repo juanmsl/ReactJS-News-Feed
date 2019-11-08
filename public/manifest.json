@@ -1,6 +1,6 @@
 {
-  "short_name": "Whats up",
-  "name": "Whats up - News feed",
+  "short_name": "News Feed",
+  "name": "News feed",
   "icons": [
     {
       "src": "logo.png",

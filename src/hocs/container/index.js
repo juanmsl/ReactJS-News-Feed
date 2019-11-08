@@ -21,7 +21,7 @@ const ContainerHOC = (Children) => (
 
       return (
         <main>
-          <Header title="Hey, Whats up?"/>
+          <Header title="News feed"/>
           <Navbar items={navbarItems}/>
           <Children {...this.props}/>
         </main>
