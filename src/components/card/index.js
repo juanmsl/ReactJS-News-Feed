@@ -29,7 +29,7 @@ class Card extends React.Component {
     return (
       <article>
         {title}
-        {moment(date).format("llll")}
+        {moment(date * 1000).format("llll")}
         <img
           src={imgLoaded ? img_url : "https://loading.io/spinners/cutiefox/lg.cutie-fox-spinner.gif"}
           alt=""
