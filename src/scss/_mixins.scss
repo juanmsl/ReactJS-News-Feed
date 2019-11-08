@@ -17,3 +17,13 @@
 		@error('The breakpoint \'#{$mediaquery}\' isn\'t a valid breakpoint name');
 	}
 }
+
+%content-container {
+	padding-left: 0;
+	padding-right: 0;
+
+    @include from(tablet) {
+        padding-left: 18%;
+        padding-right: 18%;
+    }
+}

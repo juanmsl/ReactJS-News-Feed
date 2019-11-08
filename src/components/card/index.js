@@ -1,11 +1,12 @@
 import React from 'react';
 import moment from "moment";
+import LazyLoad from 'react-lazyload';
 import {LoadImage} from "components";
 
 class Card extends React.Component {
   render() {
     const {
-      //news_id,
+      news_id,
       //url,
       title,
       date,
@@ -16,13 +17,16 @@ class Card extends React.Component {
     } = this.props;
 
     return (
-      <article>
-        {title}
-        {moment(date * 1000).format("LLLL")}
-        <LoadImage src={img_url} />
-        {source_name}
-        {category}
-      </article>
+      <LazyLoad once key={news_id} placeholder={<section>Loading...</section>}>
+        <article className="aca-card">
+          <LoadImage src={img_url} className="aca-card__image" />
+          <section>
+            <h3>{title}</h3>
+            <h5>{category}</h5>
+          </section>
+          <h6>{moment(date * 1000).format("LLLL")} | {source_name}</h6>
+        </article>
+      </LazyLoad>
     );
   }
 }

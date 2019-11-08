@@ -1,0 +1,24 @@
+.aca-card__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: $gutter * 4;
+  padding-top: $padding * 3;
+  @extend %content-container;
+}
+
+.aca-card {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 200px 1fr auto;
+
+  #{&}__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  #{&}__title {
+    text-overflow: ellipsis;
+  }
+}

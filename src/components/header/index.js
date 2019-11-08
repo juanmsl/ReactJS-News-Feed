@@ -11,11 +11,11 @@ const Header = ({title, history}) => {
   };
 
   return (
-    <header>
-      <img src={logo} alt="Logo"/>
-      <h1>{title}</h1>
-      <Form onSubmit={search}>
-        <Input name="searchValue"/>
+    <header className="aca-header">
+      <img src={logo} alt="Logo" className="aca-header__logo"/>
+      <h1 className="aca-header__title">{title}</h1>
+      <Form onSubmit={search} className="aca-header__form">
+        <Input type="search" autoComplete="off" name="searchValue" className="aca-input"/>
       </Form>
     </header>
   );

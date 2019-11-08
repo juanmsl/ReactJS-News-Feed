@@ -44,7 +44,7 @@ class Search extends React.Component {
     const {renderCards} = this.props;
 
     return (
-      <main>
+      <main className="aca-card__container">
         {renderCards(data)}
       </main>
     );

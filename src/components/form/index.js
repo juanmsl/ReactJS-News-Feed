@@ -24,9 +24,12 @@ export default class Form extends React.Component {
   };
 
   render() {
-    const {children} = this.props;
+    const {children, ...props} = this.props;
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form
+        {...props}
+        onSubmit={this.handleSubmit}
+      >
         {React.Children.map(children, (children) => (
           React.cloneElement(children, {
             onChange: this.handleChange

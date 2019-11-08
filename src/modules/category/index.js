@@ -44,7 +44,7 @@ class Category extends React.Component {
     const {data} = this.state;
 
     return (
-      <main>
+      <main className="aca-card__container">
         {renderCards(data)}
       </main>
     );
