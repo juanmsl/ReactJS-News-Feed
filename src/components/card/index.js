@@ -7,7 +7,7 @@ class Card extends React.Component {
   render() {
     const {
       news_id,
-      //url,
+      url,
       title,
       date,
       img_url,
@@ -18,14 +18,14 @@ class Card extends React.Component {
 
     return (
       <LazyLoad once key={news_id} placeholder={<section>Loading...</section>}>
-        <article className="aca-card">
-          <LoadImage src={img_url} className="aca-card__image" />
+        <a href={url} target="_blank" rel="noopener noreferrer" className="aca-card">
+          <LoadImage src={img_url} className="aca-card__image" title={title} />
           <section>
-            <h3>{title}</h3>
+            <h3 className="aca-card__title" title={title}>{title}</h3>
             <h5>{category}</h5>
           </section>
           <h6>{moment(date * 1000).format("LLLL")} | {source_name}</h6>
-        </article>
+        </a>
       </LazyLoad>
     );
   }
