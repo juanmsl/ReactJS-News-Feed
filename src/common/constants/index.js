@@ -11,12 +11,12 @@ const categories = {
     label: "Tecnología",
     id: 3
   },
-  deportes: {
-    label: "Deportes",
-    id: 4
-  },
   espectaculos: {
     label: "Espectáculos",
+    id: 4
+  },
+  deportes: {
+    label: "Deportes",
     id: 5
   }
 };
