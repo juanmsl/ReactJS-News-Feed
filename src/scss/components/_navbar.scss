@@ -22,7 +22,7 @@
       transition: all 0.3s ease;
     }
 
-    &:hover {
+    &:hover, &.selected {
       &::after {
         width: 100%;
         border-bottom-color: $primary-color;
@@ -30,7 +30,7 @@
     }
 
     &.selected {
-      background: $primary-color;
+      font-weight: bold;
     }
   }
 }

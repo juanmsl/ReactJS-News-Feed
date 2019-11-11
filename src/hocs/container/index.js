@@ -8,7 +8,7 @@ const ContainerHOC = (Children) => (
       super(props);
       this.state = {
         navbarItems: [
-          {href: "", text: "Home"},
+          {href: "/", text: "Home"},
           ...Object.keys(Constants.categories).map((category) => ({
             href: `/category/${category}`, text: Constants.categories[category].label
           }))

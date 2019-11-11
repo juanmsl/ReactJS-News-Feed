@@ -1,13 +1,13 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import {Link, withRouter} from "react-router-dom";
 
-const Navbar = ({items}) => (
+const Navbar = ({items, location}) => (
   <nav className="aca-navbar">
     {items.map((item, i) => (
       <Link
         key={i}
         to={item.href}
-        className="aca-navbar__item"
+        className={`aca-navbar__item ${item.href === location.pathname ? "selected" : ""}`}
       >
         {item.text}
       </Link>
@@ -15,4 +15,4 @@ const Navbar = ({items}) => (
   </nav>
 );
 
-export default Navbar;
+export default withRouter(Navbar);
