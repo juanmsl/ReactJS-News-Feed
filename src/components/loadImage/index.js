@@ -5,7 +5,7 @@ class LoadImage extends React.Component {
     super(props);
     this.state = {
       loaded: false,
-      loader: "https://loading.io/spinners/cutiefox/lg.cutie-fox-spinner.gif"
+      loader: "https://i.pinimg.com/originals/b8/c8/d8/b8c8d8b7f26bfd7e065f6fc82a4cc13e.gif"
     };
   }
 

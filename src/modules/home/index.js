@@ -3,6 +3,7 @@ import {withRouter} from "react-router-dom";
 import API from "api";
 import NProgress from "nprogress";
 import moment from "moment";
+import {Paginator} from 'components';
 import {ContainerHOC, RenderCardHOC} from "hocs";
 
 
@@ -29,9 +30,9 @@ class Home extends React.Component {
     const {renderCards} = this.props;
 
     return (
-      <main className="aca-card__container">
+      <Paginator className="aca-card__container">
         {renderCards(data)}
-      </main>
+      </Paginator>
     );
   }
 }

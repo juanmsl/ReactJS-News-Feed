@@ -1,0 +1,29 @@
+.aca-paginator {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  grid-gap: $gutter;
+  @extend %content-container;
+  margin: $margin * 4 0;
+
+  #{&}__button {
+    background: white;
+    padding: $padding $padding * 2;
+    font-size: 0.8em;
+    outline: 0;
+    border: 1px solid $primary-color;
+    color: $secondary-color;
+    cursor: pointer;
+
+    &.selected {
+      background: $primary-color;
+    }
+
+    &:disabled {
+      color: $gray-color;
+      border-color: $gray-color;
+      opacity: 0.5;
+      cursor: initial;
+    }
+  }
+}

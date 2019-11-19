@@ -3,6 +3,7 @@ import {withRouter} from "react-router-dom";
 import {ContainerHOC, RenderCardHOC} from "hocs";
 import NProgress from "nprogress";
 import API from "api";
+import {Paginator} from "components";
 
 
 class Search extends React.Component {
@@ -29,7 +30,6 @@ class Search extends React.Component {
     this.getData(searchValue);
   }
 
-
   componentDidUpdate(prevProps, prevState, snapshot) {
     const {searchValue} = this.props.match.params;
     const {searchValue: prevSearchValue} = prevProps.match.params;
@@ -44,9 +44,9 @@ class Search extends React.Component {
     const {renderCards} = this.props;
 
     return (
-      <main className="aca-card__container">
+      <Paginator className="aca-card__container">
         {renderCards(data)}
-      </main>
+      </Paginator>
     );
   }
 }

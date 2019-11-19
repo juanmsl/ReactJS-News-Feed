@@ -4,6 +4,7 @@ import NProgress from "nprogress";
 import API from "api";
 import {Constants} from "common";
 import {ContainerHOC, RenderCardHOC} from "hocs";
+import {Paginator} from "components";
 
 
 class Category extends React.Component {
@@ -44,9 +45,9 @@ class Category extends React.Component {
     const {data} = this.state;
 
     return (
-      <main className="aca-card__container">
+      <Paginator className="aca-card__container">
         {renderCards(data)}
-      </main>
+      </Paginator>
     );
   }
 }

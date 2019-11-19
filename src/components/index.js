@@ -4,3 +4,4 @@ export {default as Header} from './header';
 export {default as Navbar} from './navbar';
 export {default as Card} from './card';
 export {default as LoadImage} from './loadImage';
+export {default as Paginator} from './paginator';
