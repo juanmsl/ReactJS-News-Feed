@@ -1,11 +1,12 @@
 import React from 'react';
+import loader from 'assets/images/loader.gif';
 
 class LoadImage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       loaded: false,
-      loader: "https://i.pinimg.com/originals/b8/c8/d8/b8c8d8b7f26bfd7e065f6fc82a4cc13e.gif"
+      loader: loader
     };
   }
 
